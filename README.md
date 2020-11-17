@@ -6,7 +6,6 @@
 | ----------------   | ------- | ------------------------- |
 | nickname           | string  | null: false               |
 | email              | string  | null: false, unique: true |
-| password           | string  | null: false, unique: true |
 | encrypted_password | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
@@ -31,8 +30,6 @@
 | prefecture_id          | integer    | null: false                    |
 | schecluled_delivery_id | integer    | null: false                    |
 | price                  | integer    | null: false                    |
-| add_tax_price          | integer    | null: false                    |
-| profit                 | integer    | null: false, foreign_key: true |
 | user                   | references | null: false, foreign_key: true |
 
 
