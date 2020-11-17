@@ -31,27 +31,27 @@
 | prefecture_id          | integer    | null: false                    |
 | schecluled_delivery_id | integer    | null: false                    |
 | price                  | integer    | null: false                    |
-| add-tax_price          | integer    | null: false                    |
+| add_tax_price          | integer    | null: false                    |
 | profit                 | integer    | null: false, foreign_key: true |
-| user                   | reference  | null: false, foreign_key: true |
+| user                   | references | null: false, foreign_key: true |
 
 
 ### Association
-- belongs_to :users
-- has_one :orders
+- belongs_to :user
+- has_one :order
 
 
 ## orders テーブル
 
 | Column              | Type       | Options                        |
 | ------------------- | ---------- | ------------------------------ |
-| user                | reference  | null: false, foreign_key: true |
-| item                | reference  | null: false, foreign_key: true |
+| user                | references | null: false, foreign_key: true |
+| item                | references | null: false, foreign_key: true |
 
 ### Association
-- belongs_to :users
-- belongs_to :items
-- has_one :addresses
+- belongs_to :user
+- belongs_to :item
+- has_one :address
 
 
 ## addresses テーブル
@@ -63,7 +63,7 @@
 | addresses      | string     | null:false                    |
 | building       | string     |                               |
 | phone_number   | string     | null:false                    |
-| order          | reference  | null:false, foreign_key: true |
+| order          | references | null:false, foreign_key: true |
 
 ### Association
 -  belongs_to :order
