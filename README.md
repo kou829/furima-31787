@@ -7,7 +7,7 @@
 | nickname           | string  | null: false               |
 | email              | string  | null: false, unique: true |
 | password           | string  | null: false, unique: true |
-| encrypted_password | string  | null: false, unique: true |
+| encrypted_password | string  | null: false               |
 | last_name          | string  | null: false               |
 | first_name         | string  | null: false               |
 | last_name_kana     | string  | null: false               |
@@ -26,12 +26,12 @@
 | name                   | string     | null: false                    |
 | info                   | text       | null: false                    |
 | category_id            | integer    | null: false                    |
-| sales-status_id        | integer    | null: false                    |
-| shipping-fee-status_id | integer    | null: false                    |
+| sales_status_id        | integer    | null: false                    |
+| shipping_fee_status_id | integer    | null: false                    |
 | prefecture_id          | integer    | null: false                    |
-| schecluled-delivery_id | integer    | null: false                    |
+| schecluled_delivery_id | integer    | null: false                    |
 | price                  | integer    | null: false                    |
-| add-tax-price          | integer    | null: false                    |
+| add-tax_price          | integer    | null: false                    |
 | profit                 | integer    | null: false, foreign_key: true |
 | user                   | reference  | null: false, foreign_key: true |
 
