@@ -76,6 +76,11 @@ describe User do
         another_user.valid?
         expect(@user.errors.full_messages).to include "Email has already been taken"
       end
+      it "emailに@がない場合登録できない" do
+        @user.email = "test.com"
+        @user.valid?
+        expect(@user.errors.full_messages).to include "Email is invalid"
+      end
       it "パスワードは6文字以上出ないと登録できない" do
         @user.password = "furi4"
         @user.password_confirmation = "furi4"
