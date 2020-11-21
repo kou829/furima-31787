@@ -121,7 +121,6 @@ describe Item do
         @item.image = fixture_file_upload("/files/test.jpg")
         @item.price = 10000000
         @item.valid?
-        binding.pry
         expect(@item.errors.full_messages).to include("Price is not included in the list")
       end
 
@@ -130,6 +129,3 @@ describe Item do
   end
 
 end
-#   bundle exec rspec spec/models/item_spec.rb
-#   @item.errors
-#   @item.errors.full_messages
