@@ -11,6 +11,10 @@ describe UserPurchase do
       it "user_id、item_id、postal_code、prefecture_id、city、addresses、phone_number、order_idが存在すれば購入できる" do
         expect(@user_purchase).to be_valid
       end
+      it "buildingが空でも購入できる" do
+        @user_purchase.building = ""
+        expect(@user_purchase).to be_valid
+      end
     end
 
     context "商品購入がうまくいかないとき" do
