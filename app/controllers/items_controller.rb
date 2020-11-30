@@ -21,7 +21,11 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+
     if current_user.id == @item.user_id
+
+    
+
       @item.destroy
       redirect_to action: :index
     else
@@ -39,7 +43,6 @@ class ItemsController < ApplicationController
   end
 
   def update
-    
     if @item.update(item_params)
       redirect_to action: :show
     else
@@ -47,6 +50,7 @@ class ItemsController < ApplicationController
     end
   end
 
+  
 
   private
 
