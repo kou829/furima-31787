@@ -50,6 +50,11 @@ group :test do
   gem 'webdrivers'
   gem 'rspec-rails', '~> 4.0.0'
   gem 'factory_bot_rails'
+  gem 'capistrano'
+  gem 'capistrano-rbenv'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano3-unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
